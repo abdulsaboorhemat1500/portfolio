@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000;
+    --secound-color: #a09dab;
+    main-color: #f75023;
+    --big-font: #5rem;
+    --h2-font: #3rem;
+    --p-font: 1.1rem;
+}
+
+.logo img {
+    max-width: 100%;
+    width: 130px;
+    height: auto;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 18px;
+    transition: 0.3s;
+}
+
+.header .nav-list {
+    display: flex;
+}
+
+.header::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 40%;
+}
+
+.header .nav-list li {
+    position: relative;
+}
+
+.header .nav-list a {
+    font-size: var(--p-font);
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px 27px;
+}
+
+.header .nav-list a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--secound-color);
+    bottom: -3px;
+    left: 0;
+    transition: ease 0.4s;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.top-botton {
+    display: inline-block;
+    padding: 9px 30px;
+    background: transparent;
+    border: 2px solid rgb(175, 54, 54);
+    border-radius: 30px;
+    color: black;
+    letter-spacing: 1px;
+    font-size: var(--p-font);
+    font-weight: 500;
+    transition: ease 0.5s;
+}
+
+.top-botton:hover {
+    transform: scale(1.1);
+    background: rgb(218, 96, 15);
+    border: 2px solid rgb(190, 173, 21);
+    color: var(--bg-color);
+}
+
+section {
+    padding: 100px 18%;
+}
+
+.home {
+    min-width: 100vh;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/homeimg.jpg);
+    background-size: cover;
+    background-position: fixed;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 4rem;
+    bottom: 0;
+}
+
+.home-img img {
+    height: 400px;
+    width: 300px;
+}
